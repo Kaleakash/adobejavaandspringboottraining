@@ -516,3 +516,736 @@ class CarTest {
 }
 
 
+Creating more than one object 
+
+class Car {
+	int wheel;
+	String color;
+	float price;
+	void carInfo(String name) {
+		System.out.println("Car Info "+name);
+		System.out.println("Wheel "+wheel);
+		System.out.println("Color "+color);	
+		System.out.println("Price "+price);
+			
+	}
+}
+class CarTest {
+	public static void main(String args[]) {
+	Car innova  = new Car();
+	innova.wheel = 4;
+	innova.color = "Gray";
+	innova.price = 1500000;
+	innova.carInfo("Innova");
+	
+	Car swift  = new Car();
+	swift.wheel = 4;
+	swift.color = "Black";
+	swift.price = 850000;
+	swift.carInfo("Swift");	
+	}
+}
+
+
+Constructor : It is a type of special method which help to create the objects. 
+
+Pts 
+1. Constructor have same name as class itself. 
+2. Constructor doesn't contains return type not even void also. 
+3. Constructor no need call explicity like a method. It will call automatically when we create the 
+objects. 
+
+Constructor Example 
+
+class Car {
+
+	Car() {
+		System.out.println("Object created....");
+	}
+		
+	void carInfo() {
+		System.out.println("Car class method");	
+	}
+}
+class CarTest {
+	public static void main(String args[]) {
+	Car obj1 = new Car();
+	obj1.carInfo();	
+	obj1.carInfo();
+	obj1.carInfo();
+
+	Car obj2 = new Car();
+	obj2.carInfo();
+	obj2.carInfo();
+	}
+}
+
+
+
+Parameterized constructor
+
+class Operation {
+	int a,b,sum;
+	Operation(){
+		a=1;
+		b=2;
+	}
+	Operation(int a, int b) {
+		//a=a;	// local variable = local variable
+		//b=b;
+		this.a = a;
+		this.b=b;	//instance variable = local variable
+	}
+	void setValue(int a, int b) {
+		this.a = a;
+		this.b = b;
+	}
+	void add() {
+		sum = a+b;
+	}
+	void display() {
+		System.out.println("Sum is "+sum);	
+	}
+}
+class Test {
+	public static void main(String args[]) {
+	Operation op1 = new Operation();
+	op1.add();
+	op1.display();
+	
+	Operation op2 = new Operation();
+	op2.add();
+	op2.display();
+	
+	Operation op3 = new Operation(100,200);
+	op3.add();
+	op3.display();
+
+	Operation op4 = new Operation();
+	op4.setValue(111,222);
+	op4.add();
+	op4.setValue(1111,2222);
+	op4.add();
+	op4.display();
+	
+	}
+}
+
+
+
+Encapsulation : Binding or wrapping data(fields/variables) and code(functions/methods) in a single unit 
+is known as Encapsulation. 
+
+Ex: class. 
+
+Example 
+
+class Employee {
+	private int id;
+	private String name;
+	private float salary;
+	void setValue(int id, String name, float salary) {
+		this.id = id;
+		this.name = name;
+		//this.salary = salary;
+		if(salary<0) {
+			this.salary = 8000;
+		}else {
+			this.salary = salary;
+		}
+	}
+	void display() {
+		System.out.println("id is "+id);
+		System.out.println("name is "+name);
+		System.out.println("salary is "+salary);
+	}
+}
+class Test {
+	public static void main(String args[]) {
+	Employee emp = new Employee();
+	//emp.id =100;
+	//emp.name = "Ravi";
+	//emp.salary = -12000;
+	emp.setValue(100,"Ravi",12000);
+	emp.display();
+	}
+}
+
+
+
+Inheritance : Inheritance is use to inherits or acquire the properties and behaviour of old 
+class to new class. 
+
+class OldClass {		super class, base class or parent class 
+	properties 
+	behaviour 
+}
+
+class NewClass extends OldClass{  sub class, derived class or child class. 
+	properites 
+	behaviour 
+}
+
+class A {
+	void dis1() {
+		System.out.println("dis1 method");
+	}
+}
+class B extends A{
+	void dis2() {
+		
+		System.out.println("dis2 method");
+	}
+}
+class Test {
+	public static void main(String args[]) {
+	A obj1 = new A();
+	obj1.dis1();
+
+	B obj2 = new B();
+	obj2.dis1();
+	obj2.dis2();
+
+
+			
+	}
+}
+
+
+Types of Inheritance 
+
+1. Single Inheritance : One super class and one sub class 
+class A {}
+class B extends A{}
+
+2. Multilevel Inheritance : One super class and n number of sub class connected one by one 
+class A {}
+class B extends A{}
+class C extends B {}
+class D extends C {}
+
+3. Hierarchical Inheritance : one super class and n number of sub classes connected directly to super class
+
+class A {}
+class B extends A{}
+class C extends A{}
+
+4. Multiple Inheritance : More than one super class and one sub class 
+class A {}
+class B {}
+class C extends A,B{}		wrong (Java doesn't support this type of inheritance)
+We can achieve indirectly this type of inheritance using interface. 
+
+OOPs Relationship 
+
+1. is a 
+2. has a 
+
+			Manager is a Employee  
+			Employee has a Address 
+class Employee {
+		id,name,salary
+		Address add = new Address();	
+		Scanner obj = new Scanner(System.in);
+		read() {}	recive id,name,salary
+		calSalary(){}		5000
+		display(){}	id,name,salary
+}
+class Manager extends Employee{
+	numberOfEmp;
+	readMgr() {}	recieve numberOfEmp;
+			add.readAddress();	
+	disMgr(){}	numberOfEmp;
+			add.disAddress();
+}
+class Address {
+	city,state, pinCode;
+	Scanner obj;
+	readAdd(){}	receive city,state and pinCode;
+	disAdd() {}
+}	
+class EmployeeTest 
+	main method 
+	Manager mgr (create object)
+	mgr.read();
+	mgr.readMgr();
+	mgr.calSalary();
+	
+	mgr.display();
+	mgr.displayMgr();
+
+
+Polymorphism : One name many forms or many implementation 
+
+			Java 
+
+Compile time 					Run time 
+
+static binding 					dynamic binding 
+
+early binding 					late binding 
+
+ex:
+
+Method overloading 				Method Overriding 
+
+The method have 
+same name but different 
+parameter list(type of 
+parameter list as well as 
+number of parameter list). 
+
+Method Overloading 
+
+class Abc {
+	/*void add(int x, int y) {
+	System.out.println("(int,int)");
+	System.out.println(x+y);
+	}*/
+	void add(int x, int y,int z) {
+	System.out.println(x+y+z);
+	}
+	void add(String s1, String s2) {
+	System.out.println(s1+s2);
+	}
+	void add(int x, float y) {
+	System.out.println("(int,float)");
+	System.out.println(x+y);
+	}
+}
+class Test {
+	public static void main(String args[]) {
+	Abc obj = new Abc();
+	obj.add(10,20);
+	obj.add("10","20");
+	obj.add(1,2,3);	
+	float abc = 10.10f;
+	float abc1 = (float)10.10;
+	System.out.println(abc);
+	obj.add(100,200.10f);				
+	}
+}
+
+
+
+Method Overriding : The method have same name and same method signature 
+(number of parameter list, type of parameter list and return type must be same).
+
+
+
+Example 
+
+class Bike {
+	void speed() {
+	System.out.println("60km/hr");
+	}
+	float speed(int x, int y){
+		return 10.10f;
+	}
+}
+class Pulsar extends Bike {
+	void color() {
+	System.out.println("Black");
+	}
+	void speed() {
+	System.out.println("90km/hr");
+	}
+	int speed(int x) {
+		return 10;
+	}
+}
+class HeroHonda extends Bike {
+	void color() {
+	System.out.println("Gray");
+	}
+}
+class Tvs extends Bike {
+	void color() {
+	System.out.println("Red");
+	}
+	void speed() {
+	super.speed();	//merge both speed method
+	System.out.println("20km/hr");
+	}	
+}
+class Test {
+	public static void main(String args[]) {
+	HeroHonda hh = new HeroHonda();
+	hh.color();	hh.speed();
+	Pulsar pu = new Pulsar();
+	pu.color();	pu.speed();			
+	Tvs tv = new Tvs();
+	tv.color();		tv.speed();	
+	tv.speed(8,9);
+	}
+}
+
+
+
+Annotation : meta-data (data about data). 
+
+all annotation start with @ followed by annotation name. 
+we can use annotation on class level, method level, property level. 
+
+@Override 
+
+
+class Bike {
+	void speed() {
+	System.out.println("60km/hr");
+	}
+}
+class Pulsar extends Bike {
+	@Override
+	void speed() {
+		System.out.println("90km/hr");
+	}
+}
+class Test {
+	public static void main(String args[]) {
+	Pulsar pu = new Pulsar();
+	pu.speed();		
+	}
+}
+
+
+Run time polymorphsim 
+
+class Bike {
+	void speed() {
+	System.out.println("60km/hr");
+	}
+	void color() {
+		System.out.println("Gray");
+	}
+}
+class Pulsar extends Bike {
+	void speed() {
+		System.out.println("90km/hr");
+	}
+	void mailage() {
+		System.out.println("65km/hr");
+	}
+}
+class Test {
+	public static void main(String args[]) {
+	Bike bb = new Bike();
+		bb.color();	bb.speed(); //bb.mailage();
+	Pulsar pu = new Pulsar();
+		pu.color();	pu.speed(); pu.mailage();
+	Bike bb1 = new Pulsar();	// run time polymorphism 
+	bb1.color();	bb1.speed();	//bb1.mailage();
+	
+	Pulsar pu1 = (Pulsar)bb1;	//down level type casting 
+	pu1.mailage();	
+
+	//Pulsar pu1 = new Bike();
+	}
+}
+
+
+abstract :
+	1. abstract is keyword we can use with method and class but not with variable. 
+	2. abstract method : The method without body or without curly brackets or incomplete method 
+	is known as abstract method. 
+
+		syntax 
+
+		abstract returnType methodName(parameterList);
+
+		abstract void speed();
+	3. if class contains abstract method then we have to declare the class as abstract class. 
+
+		syntax 
+
+		abstract class className {
+
+		}
+	4. which ever class extends abstract class that class must be provide the body for all abstract 
+	method belong that class. That class can ignore only if that class itself is abstract class. 
+
+	5. abstract class we can't create the object. 
+
+	6. abstract class can contains zero or 1 or all abstract methods. 
+	
+abstract example 
+
+abstract class Bike {
+	abstract void speed();
+	void color() {
+		System.out.println("Gray");
+	}	
+}
+class Pulsar extends Bike {
+	void speed() {
+		System.out.println("90km/hr");
+	}
+}
+class Test {
+	public static void main(String args[]) {
+	Pulsar pu = new Pulsar();
+	pu.speed();
+	}
+}
+
+final keyword : 1. final keyword we can use with class, method and variable. 
+		2. final variable : to declare constant in java we use final keyword. 
+			final int A=10;
+		3. final method : if method is final we can't override that method. 
+
+		4. final class : if class is final we can't extends that class.
+
+		final and abstract we can't use together. 
+
+
+final example with error 
+
+final class Bike {
+	final void speed() {
+		System.out.println("60km/hr");
+	}	
+}
+class Pulsar extends Bike {
+	/*void speed() {
+		System.out.println("90km/hr");
+	}*/
+}
+class Test {
+	public static void main(String args[]) {
+	final float PI=3.142f;
+	System.out.println(PI);
+	//PI=45.67f;
+
+	Pulsar pu = new Pulsar();
+	pu.speed();	
+	}
+}
+
+
+static : static is a keyword we can use with method and variable but not with class. 
+(if class is inner class then we can use static keyword).
+
+1st example of static 
+
+class Abc {
+	int a;
+	static int b;
+	void dis1() {
+		System.out.println("non static method");
+		System.out.println("a "+a);
+		System.out.println("b "+b);
+	}
+	static void dis2() {
+		System.out.println("static method");
+		System.out.println("a "+a);
+		System.out.println("b "+b);
+	}
+}
+class Test {
+	public static void main(String args[]) {
+	Abc obj1 = new Abc();
+	obj1.dis1();
+	Abc.dis2();	//static method
+	obj1.a=10;
+	Abc.b=20;	//static variable 
+				
+	obj1.dis2();
+	obj1.b=30;
+	}
+}
+
+
+
+2nd Example 
+
+class Abc {
+	int a;
+	static int b;
+	void dis1() {
+		System.out.println("a "+a);
+		System.out.println("b "+b);
+	}
+	
+}
+class Test {
+	public static void main(String args[]) {
+	Abc obj1 = new Abc();
+	Abc obj2 = new Abc();
+			obj1.a=10;
+		Abc.b=20;
+		obj1.b=30;
+	
+			obj2.a=40;
+	Abc.b=50;
+	obj2.b=60;
+	
+	obj1.dis1();	//a=10, b = 60
+	obj2.dis1();	//a=40, b =60
+	}
+}
+
+
+final and static example 
+
+class Abc {
+	final int a=10;
+	final static int b=20;
+	void dis1() {
+		System.out.println("a "+a);
+		System.out.println("b "+b);
+	}
+	
+}
+class Test {
+	public static void main(String args[]) {
+	Abc obj1 = new Abc();
+	Abc obj2 = new Abc();	
+	}
+}
+
+
+interface : interface is known 100% pure abstract class till java 7.
+
+syntax 
+
+	interface interfaceName {
+		fields;
+		methods;
+	}
+
+	by default all variable are public static and final. 
+	by default all methods are public and abstract. 
+
+	interface Abc {
+		public static final int A=10;
+		public abstract void dis1();
+	}
+
+	interface Abc {
+		int A=10;
+		void dis1();
+	}
+
+	interface Xyz {
+		int B=20;
+		void dis2();
+	}
+
+	interface Mno extends Abc,Xyz {
+		int C=30;
+		void dis3();
+	}
+
+	class Aa implements Abc,Xyz {
+
+	}
+
+	class to class : extends only one 
+	interface to interface : extends more than one 
+	class to interface : implements more than one 
+
+	interface to class : None 
+
+	
+	method Level overriding rules 
+
+	super 				sub 
+
+	public 				public 
+
+	protected 			public 
+					protected 
+
+	default(nothing)		public 
+					protected 
+					default(nothing)
+
+	private 			can't override 
+
+	
+interface Abc {
+	int A=10;
+	void dis1();
+}
+interface Xyz {
+	int B=20;
+	void dis2();
+}
+interface Mno extends Abc,Xyz {
+	int C=30;
+	void dis3();
+}
+
+class Aa implements Abc,Xyz {
+	public void dis1() {
+		System.out.println("Abc interface method");
+	}
+	public void dis2() {
+		System.out.println("Xyz interface method");
+	}
+}
+class Test {
+	public static void main(String args[]) {
+	Aa obj = new Aa();
+	obj.dis1();
+	obj.dis2();	
+	}
+}
+
+
+
+Another example 
+
+interface A {
+	int add(int x, int y);
+}
+interface B {
+	int sub(int x, int y);
+}
+class Server implements A,B{
+	public int add(int x, int y) {
+		return x+y;
+	}
+	public int sub(int x, int y) {
+		return x+y;
+	}
+	void ownMethod() {
+		System.out.println("Server own method");
+	}
+}
+class Test {
+	public static void main(String args[]) {
+	Server ss = new Server();
+	A obj1 = new Server();	//RMI 
+	B obj2 = new Server();	
+	System.out.println(obj1.add(1,2));		
+	//System.out.println(obj1.sub(1,2));		
+	//System.out.println(obj2.add(1,2));
+	System.out.println(obj2.sub(1,2));				
+	}
+}
+
+
+
+	
+
+
+
+
+		
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
