@@ -1,0 +1,518 @@
+
+
+			Java and Spring boot Trainig - 
+
+git url 
+
+https://github.com/Kaleakash/adobejavaandspringboottraining.git
+
+
+
+Day 1 : 24/08/20
+
+#include<stdio.h>
+
+function mno() {
+
+}
+function xyz() {
+	mno();
+}
+
+function abc() {
+	xyz();
+}
+void main() {
+
+	abc();
+	abc();
+}
+
+Java : Java is platform independent and pure object oriented programming language. 
+
+
+object : object is a any real world entity. 
+
+
+		state or properties ----> have-----> fields /variables -->int/float/char/boolean/string 
+person 
+		behaviour ----------------->do/does------>function / methods  
+place
+bank 
+animal 
+car 
+
+
+class : blue print of object or template of object. 
+
+nov 1995, By James Gosling 
+Features of Java 
+
+1. Simple : Pointer, Virtual, Friend, Memory Management, Operator overloading etc. 
+
+2. Plantform independent programming language.Byte code. 
+
+3. Pure object oriended programming language. 
+
+4. Compiler and INterpreter 
+
+ 
+class Syntax 
+
+class ClassName {
+	fields;
+	methods;
+}
+
+className must be follow pascal naming rules. 
+
+class Demo {
+
+	public static void main(String args[]) {
+		System.out.println("Welcome to Java...");
+	}
+}
+	
+javac Demo.java 	: compile the program 
+
+java Demo 		: run the application 
+
+
+
+Data Types : 
+
+1. primitive data types : It is use to store only value 
+2. non primitive data types : it is use to store value as well as another data. 
+non primitive also known as reference data types. 
+
+primitive data types : 8 types 
+
+1. byte		1 
+2. short 	2
+3. int 		4
+4. long 	8
+
+5. float 	4
+6. double 	8
+7. char 	2
+8. boolean 	1 bit 
+
+data types examples 
+
+class Demo {
+	
+	public static void main(String args[]) {
+	int a=10;
+	char b ='b';
+	boolean c = true;
+
+	System.out.println(a);
+	System.out.println(b);
+	System.out.println(c);	
+	System.out.print(a);
+	System.out.printf("The value of a is = %d",a);
+	System.out.println("The value of a is "+a);
+	System.out.println(10+10);
+	System.out.println("10"+10);
+	System.out.println(10+"10");
+	}
+
+	
+}
+
+type casting : convering one data types to another data type is known as type casting. 
+
+1. implicit 
+2. explicit 
+
+
+		int family 
+
+			------------>implicit --------------->
+		byte		short 		int 	long 
+
+			<-------------explicit ----------------
+
+
+		int to float 
+
+				---------->implicit -------------->
+				int 		float 
+				<----------explicit -----------------
+
+
+
+type casting 
+
+class Demo {
+	
+	public static void main(String args[]) {
+	byte a=10;
+	short b =a;
+	
+	System.out.println(a);
+	System.out.println(b);
+
+	short c = 10;
+
+	byte d = (byte)c;
+
+	// byte d = (type)c;
+	
+	System.out.println(c);
+	System.out.println(d);		
+	}
+
+	
+}
+
+Operator 
+if statement 
+		if(condition) {
+
+		}
+		ex: 
+
+		if (a>b) {
+
+		}
+
+		if else 
+
+		if (condition) {
+
+		}else {
+
+		}
+		
+		nested if 
+
+		if(condition) {
+
+			if(condition){
+
+			}else {
+
+			} 
+		}else {
+
+
+		}
+
+		if (condition) {
+
+		}else if(condition) {
+
+		}else if (condition) {
+
+		}else {
+
+		}
+
+switch 
+		switch(variableName) {		int, char, string 
+		case value:block1;
+			break;
+		case value:block1;
+			break;
+		case value:block1;
+			break;
+		default : default block
+			break;
+		}
+	
+looping - while loop, do while loop and for loop 
+
+		start, end 
+
+		condition (true)
+
+			body 
+
+
+				increment / decrement 
+
+while loop example 
+
+class Demo {
+	public static void main(String args[]) {
+	int i=1,n=10;
+		while(i<=n) {
+			System.out.println(i);
+			i++;
+		}
+	}
+}
+
+do while loop example 
+
+class Demo {
+	public static void main(String args[]) {
+	int i=1,n=10;
+		do {
+			System.out.println(i);
+			i++;
+		}while(i>=n);
+	}
+}
+
+for loop syntax 
+		1		2		4
+	for(initialization;condition;increment/decrement) {
+			body of the loop	3
+	}
+
+
+for loop example 
+
+class Demo {
+	
+	public static void main(String args[]) {
+	for(int i=0;i<=10;i++) {
+		System.out.println(i);
+	}
+	}
+
+	
+}
+
+jar, war, ear .class 
+
+
+
+
+for each loop or enhanced loop 
+
+
+non primitive data types : 4 types 
+1. array 
+2. class (pre-defined or user-defined)
+3. interface (pre-defined or user-defined)
+4. enum 
+
+array : 
+
+syntax 
+
+	dataType arrayName[];
+
+	int abc[10];	C/C++ but in java 
+
+	int abc[];	in java 
+
+			int []abc;
+	
+	int [] abc;
+
+	int[] abc;
+
+		
+
+	for each loop syntax 
+
+	for(dataType variableName : arrayName/collectionclasses) {
+
+	}
+
+	
+for each loop example 
+
+class Demo {
+	public static void main(String args[]) {
+	int []abc;
+	
+	int []xyz={10,20,30,40,50};
+
+	System.out.println(xyz[0]);
+	System.out.println(xyz[3]);
+	
+	int []mno={1,2,3,4,6,8,8,9,9};
+
+	System.out.println("using for loop");
+	for(int i=0;i<mno.length;i++) {
+		System.out.println(mno[i]);
+	}
+
+	System.out.println("for each loop");
+	for(int a:mno) {
+		System.out.println(a);
+	}
+	}
+}
+
+
+creating memory size for array 
+
+	dataType []arrayName = new arrayName[size];
+
+	int []abc = new int[10];
+
+
+	abc[0]		to 	abc[9];
+
+	default value for array 
+	int family --0
+	float family --0.0
+	char -- space 
+	boolean -- false 
+	String -- null
+
+Example of array 
+
+class Demo {
+	public static void main(String args[]) {
+	int []abc = new int[10];
+	int n=100;
+	
+	for(int i=0;i<abc.length;i++) {
+		abc[i]=n;
+		n++;
+	}
+	System.out.println("value are ");
+	for(int i=0;i<abc.length;i++) {
+		System.out.println(abc[i]);
+	}
+	}
+}
+
+
+Taking the value through keyword 
+
+1. using Scanner class 
+2. BufferedReader 
+3. DataInputStream 
+4. Command line arguments. 
+
+Using Scanner class 
+
+Scanner is a pre-defined class which help to scan the value through 
+keyboards. 
+
+syntax to create the Scanner class object. 
+
+Scanner obj = new Scanner(System.in);
+
+package : it is collection of classes and interfaces. 
+
+Scanner is a class part of util package. 
+
+method / fields follow camel Naming rules. 
+
+Example using Scanner class 
+
+import java.util.Scanner;
+class Demo {
+	public static void main(String args[]) {
+	Scanner obj = new Scanner(System.in);
+	System.out.println("Enter the id");
+	int id = obj.nextInt();
+	System.out.println("id is "+id);
+	
+	System.out.println("Enter the name");
+	String name= obj.next();
+	System.out.println("name is "+name);
+	System.out.println("Enter the salary");
+	float salary = obj.nextFloat();
+	System.out.println("salary is "+salary);	
+	}
+}
+
+
+
+object : any real world entity 
+
+class : blue print of object. 
+
+
+car object 
+
+
+syntax to create the object 
+
+
+className objectName/objectReference = new className();
+
+
+class and object example 
+
+class Car {
+	int wheel;
+	String color;
+	float price;
+	void start() {
+	System.out.println("Car Start");
+	}
+	void appliedGear() {
+	System.out.println("Applied gear");
+	}
+	void moving() {
+	System.out.println("Car is moving");
+	}
+	void stop() {
+	System.out.println("Car Stop");
+	}
+
+}
+class CarTest {
+	public static void main(String args[]) {
+	Car santro = new Car();
+	santro.start();
+	santro.appliedGear();
+	}
+}
+
+
+Types of fields / variables 
+
+3 types 
+
+1. instance variable :
+	a. The variable which declared inside a class but outside a method including main method 
+	is known as instance variable. 
+	b. instance variable hold default value according to their data types 
+	int family --0
+	float family --0.0
+	char --space 
+	boolean -- false 
+	String -- null
+	c. instance variable can access directly within a method but method must be part of same 
+	class as well as it must be non static method. 
+	
+2. local variable :
+	a. the variable which declare inside a method including main method is known as local variable. 
+	b. local variable doesn't hold default value we have to initialize. 
+	c. the scope of the variable within that method where it declare. 
+		
+3. static variable :
+
+
+Access fields using objects 
+
+class Car {
+	int wheel;
+	String color;
+	float price;
+	
+	void carInfo() {
+		int temp=0;
+		System.out.println("Wheel "+wheel);
+		System.out.println("Color "+color);	
+		System.out.println("Price "+price);
+		System.out.println("Temp Info "+temp);		
+	}
+}
+class CarTest {
+	public static void main(String args[]) {
+	int abc[];
+	int xyz[]=new int[10];
+	Car innova  = new Car();
+	innova.carInfo();
+	innova.wheel = 4;
+	innova.color = "Gray";
+	innova.price = 1500000;
+	innova.carInfo();
+	System.out.println("Price is "+innova.price);
+	}
+}
+
+
