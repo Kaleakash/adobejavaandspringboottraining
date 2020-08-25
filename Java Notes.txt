@@ -6,6 +6,7 @@ git url
 
 https://github.com/Kaleakash/adobejavaandspringboottraining.git
 
+https://docs.google.com/document/d/1PkIj97TJV6SQwMurUJyOysJ95PAaueFt6E_g4v72hMQ/edit?usp=sharing
 
 
 Day 1 : 24/08/20
