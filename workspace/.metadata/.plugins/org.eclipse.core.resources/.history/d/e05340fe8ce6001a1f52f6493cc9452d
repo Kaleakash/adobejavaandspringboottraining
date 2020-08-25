@@ -1,0 +1,8 @@
+package abc;
+
+public class Manager extends Employee{
+
+	void displayInfo() {
+		System.out.println(name);
+	}
+}

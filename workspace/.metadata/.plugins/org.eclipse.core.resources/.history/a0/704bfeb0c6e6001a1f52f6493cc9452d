@@ -1,0 +1,16 @@
+package main;
+
+import bean.Employee;
+
+public class DemoTest {
+
+	public static void main(String[] args) {
+		Employee emp1 = new Employee();
+		emp1.setId(100);
+		emp1.setName("Ravi");
+		emp1.setSalary(12000);
+		
+		
+	}
+
+}

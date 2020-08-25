@@ -1,0 +1,6 @@
+package mno;
+
+
+public class Programmer extends Employee{
+
+}

@@ -1,0 +1,6 @@
+package mno;
+//import abc.Employee;
+import abc.*;
+public class Programmer extends Employee{
+
+}
