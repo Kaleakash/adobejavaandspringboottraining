@@ -34,6 +34,8 @@ public class OperationTest {
 		Operation op1 = new Operation();
 		int result = op1.add(100, 200);
 		assertEquals(300, result);
+		int result1 = op1.add(101, 201);
+		assertEquals(300, result1);
 	}
 
 	@Test
@@ -43,10 +45,14 @@ public class OperationTest {
 		List<String> listOfStd = op.getInfo();
 		assertEquals(3, listOfStd.size());
 		assertEquals("ravi", listOfStd.get(0));
+		
+		
 	}
 	
 	@After
 	public void after() {
 		System.out.println("After Every Test");
 	}
+	
+	
 }

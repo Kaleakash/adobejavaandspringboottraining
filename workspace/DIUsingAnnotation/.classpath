@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_241"/>
+	<classpathentry kind="lib" path="C:/Users/Vishal/Desktop/Java Training/spring annotation jar/commons-logging.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vishal/Desktop/Java Training/spring annotation jar/org.springframework.context-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vishal/Desktop/Java Training/spring annotation jar/asm-debug-all-3.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vishal/Desktop/Java Training/spring annotation jar/cglib-2.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vishal/Desktop/Java Training/spring annotation jar/org.springframework.asm-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vishal/Desktop/Java Training/spring annotation jar/org.springframework.beans-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vishal/Desktop/Java Training/spring annotation jar/org.springframework.context.support-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vishal/Desktop/Java Training/spring annotation jar/org.springframework.core-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vishal/Desktop/Java Training/spring annotation jar/org.springframework.expression-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vishal/Desktop/Java Training/spring annotation jar/org.springframework.jdbc-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vishal/Desktop/Java Training/spring annotation jar/org.springframework.orm-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vishal/Desktop/Java Training/spring annotation jar/org.springframework.transaction-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

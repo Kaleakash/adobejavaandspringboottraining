@@ -17,4 +17,10 @@ public class Operation {
 				listOfStd.add("rajesh");
 				return listOfStd;
 			}
+			
+			public String getEmployeeFromDb() {
+									//codiing to call the DAO Methods with conditions. 
+				
+				return "Welcome to Db Login";
+			}
 }
