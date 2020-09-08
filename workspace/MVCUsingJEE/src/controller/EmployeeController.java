@@ -16,7 +16,7 @@ import service.EmployeeService;
 /**
  * Servlet implementation class EmployeeController
  */
-@WebServlet("/EmployeeController")
+@WebServlet("/EmployeeController")		//url pattern 
 public class EmployeeController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -41,16 +41,19 @@ public class EmployeeController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		PrintWriter pw = response.getWriter();
+		PrintWriter pw = response.getWriter(); // display the output on browser. 
 		Employee emp = new Employee();
 		emp.setId(Integer.parseInt(request.getParameter("id")));
 		emp.setName(request.getParameter("name"));
 		emp.setSalary(Float.parseFloat(request.getParameter("salary")));
+		
 		EmployeeService es = new EmployeeService();
 		String result = es.storeEmployee(emp);
-		pw.print(result);
+		
+		pw.print(result);			//Store or Didn't store 
 		RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
 		rd.include(request, response);
+		
 	}
 
 }

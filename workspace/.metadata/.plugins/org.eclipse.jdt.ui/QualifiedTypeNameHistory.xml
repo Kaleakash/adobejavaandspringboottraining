@@ -14,7 +14,6 @@
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="com.MethodRef"/>
-<fullyQualifiedTypeName name="com.Operation"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="org.junit.Test"/>
 <fullyQualifiedTypeName name="java.util.List"/>
@@ -23,4 +22,15 @@
 <fullyQualifiedTypeName name="org.junit.After"/>
 <fullyQualifiedTypeName name="org.junit.BeforeClass"/>
 <fullyQualifiedTypeName name="org.junit.AfterClass"/>
+<fullyQualifiedTypeName name="org.mockito.Mockito"/>
+<fullyQualifiedTypeName name="com.Operation"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="resource.DbResource"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Scope"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
 </qualifiedTypeNameHistroy>

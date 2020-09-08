@@ -8,7 +8,7 @@
 </head>
 <body>
 <%
-response.sendRedirect("open.spring");
+response.sendRedirect("open.spring");	//abc
 %>
 </body>
 </html>

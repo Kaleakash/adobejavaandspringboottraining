@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 
 import com.bean.Emp;
 
-@Repository
+@Repository												//@Repository Dao layer specific 
 public class EmpDao {
 
 	//1st Way to do the operation
@@ -34,15 +34,17 @@ public class EmpDao {
 	}
 	*/
 	//2nd Way to do the operation
-	@PersistenceUnit
-	EntityManagerFactory factory;
+	@PersistenceUnit				//DI 
+	EntityManagerFactory factory;				//Connection con 
+	
+	
 	public boolean storeEmpDao(Emp emp){
 		try {
-			EntityManager manager = factory.createEntityManager();
+			EntityManager manager = factory.createEntityManager();	//PreparedStatement
 			EntityTransaction tran = manager.getTransaction();
-			tran.begin();
-			manager.persist(emp);
-			tran.commit();
+				tran.begin();
+								manager.persist(emp); //insert query 
+				tran.commit();
 			return true;
 		} catch (Exception e) {
 			// TODO: handle exception

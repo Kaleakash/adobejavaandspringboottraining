@@ -1,7 +1,7 @@
 package pack;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -13,8 +13,19 @@ private int id;
 private String name;
 
 private float salary;
+
 @Autowired
 private Address add;
+@Autowired
+@Qualifier(value="add1")
+private Address ladd;
+
+public Address getLadd() {
+	return ladd;
+}
+public void setLadd(Address ladd) {
+	this.ladd = ladd;
+}
 public int getId() {
 	return id;
 }
@@ -42,7 +53,7 @@ public void setAdd(Address add) {
 @Override
 public String toString() {
 	return "Employee [id=" + id + ", name=" + name + ", salary=" + salary
-			+ ", add=" + add + "]";
+			+ ", add=" + add + "] "+ladd;
 }
 
 }

@@ -12,11 +12,12 @@
   <servlet>
     <description></description>
     <display-name>SimpleDemo</display-name>
-    <servlet-name>SimpleDemo</servlet-name>
+    <servlet-name>A</servlet-name>
     <servlet-class>com.SimpleDemo</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>SimpleDemo</servlet-name>
-    <url-pattern>/SimpleDemo</url-pattern>
+    <servlet-name>A</servlet-name>
+    <url-pattern>/abc</url-pattern>
+    
   </servlet-mapping>
 </web-app>

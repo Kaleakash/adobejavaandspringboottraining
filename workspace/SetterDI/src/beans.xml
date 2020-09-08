@@ -5,5 +5,17 @@
 
 <bean id="obj1" class="pack.Emp">
 	<property name="msg" value="This is Setter DI Example"></property>
+	<property name="id" value="100"></property>
+	<property name="name" value="Ravi"></property>
+</bean>
+
+<bean id="obj2" class="pack.Emp" scope="singleton">
+
+</bean>
+
+<bean id="obj3" class="pack.Emp" scope="singleton">
+	<constructor-arg value="hello from xml file"></constructor-arg>
+	<constructor-arg value="123"></constructor-arg>
+	<constructor-arg value="Ramesh"></constructor-arg>
 </bean>
 </beans>

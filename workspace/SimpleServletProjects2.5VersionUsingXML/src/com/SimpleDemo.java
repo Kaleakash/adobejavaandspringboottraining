@@ -22,7 +22,7 @@ public class SimpleDemo extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
+	/**		init(), service(), destroy() 
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -31,7 +31,7 @@ public class SimpleDemo extends HttpServlet {
 		String user = request.getParameter("user");
 		String pass = request.getParameter("pass");
 		if(user.equals("Raj") && pass.equals("Deep")) {
-			pw.println("Successfully Login!");
+			pw.println("Successfully Login! with Get");
 		}else {
 			pw.println("Failure try once again!");
 		}
@@ -42,7 +42,14 @@ public class SimpleDemo extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		PrintWriter pw = response.getWriter();
+		String user = request.getParameter("user");
+		String pass = request.getParameter("pass");
+		if(user.equals("Raj") && pass.equals("Deep")) {
+			pw.println("Successfully Login! with Post");
+		}else {
+			pw.println("Failure try once again!");
+		}
 	}
 
 }
